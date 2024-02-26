@@ -31,3 +31,66 @@ body {
     text-wrap: balance;
   }
 }
+
+
+
+h1{
+  font-size: 2em;
+  text-align: center;
+}
+
+.search{
+  display: flex;
+  margin:2em 1em 2em 70%;
+}
+form{
+  display: grid;
+  grid-template-columns:repeat(2,50%);
+    row-gap: 1em;
+    justify-content: center;
+    border:2px solid black;
+    padding: 2em 0.01em 2em 2em;
+    margin:0 15% 0 15%;
+    border-radius: 0.5em;
+}
+
+input{
+  margin-left: 1em;
+}
+
+label{
+  font-weight: 500;
+}
+
+.hobbies{
+  display: grid;
+  grid-template-columns:repeat(2,30%);
+}
+#inputform{
+border:2px solid black;
+margin:3% 40% 3% 40%;  
+}
+
+.table{
+  margin:5% 10% 5% 10%;
+  border: 2px solid black;
+}
+th, td {
+  border: 1px solid black; /* Set border for cells */
+  padding: 8px; /* Add padding for better readability */
+}
+
+
+.a{
+  border:3px soild purple;
+  margin:0.12em;
+}
+
+
+select{
+  border :2px solid black;
+  border-radius: 3px;
+}
+.searchinput{
+  padding:0.25em;
+}
