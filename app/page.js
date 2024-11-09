@@ -10,16 +10,13 @@ function App() {
   const [selectedUser, setSelectedUser] = useState(null);
   const [filters,setFilter]=useState([]);
 
-  // Fetch users on component mount
   useEffect(() => {
     fetchUsers();
   }, []);
 
-
-  // Fetch users from API
   const fetchUsers = async () => {
     try {
-      const response = await fetch(`http://localhost:8000/0/`);
+      const response = await fetch(`http://localhost:3001/0/`);
       const data = await response.json();
       setUsers(data);
     } catch (error) {
@@ -27,10 +24,10 @@ function App() {
     }
   };
 
-  // Create a new user
+
   const addUser = async (userData) => {
     try {
-      const response = await fetch('http://localhost:8000/0/', {
+      const response = await fetch('http://localhost:3001/0/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -47,7 +44,7 @@ function App() {
   // Update an existing user
   const updateUser = async (userData) => {
     try {
-      const response = await fetch(`http://localhost:8000/0/${userData.id}`, {
+      const response = await fetch(`http://localhost:3001/0/${userData.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -68,7 +65,7 @@ function App() {
   // Delete a user
   const deleteUser = async (userId) => {
     try {
-      await fetch(`http://localhost:8000/0/${userId}`, {
+      await fetch(`http://localhost:3001/0/${userId}`, {
         method: 'DELETE',
       });
       const updatedUsers = users.filter((user) => user.id !== userId);
@@ -116,8 +113,10 @@ setFilter(filteredUsers);
       }
       <InputForm addUser={addUser} updateUser={updateUser} initialData={{firstname: "",lastname: "",email: "",dob: "",gender: "",hobbies:[],interests:""
 }} />
-      <UserList users={users}  editUser={setSelectedUser} deleteUser={deleteUser} />
 
+<InputForm/>
+      <UserList users={users}  editUser={setSelectedUser} deleteUser={deleteUser} />
+`
       {selectedUser ? (
         <div>
           <UserDetail users={selectedUser} />

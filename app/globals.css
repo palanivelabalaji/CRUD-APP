@@ -66,9 +66,12 @@ label{
   display: grid;
   grid-template-columns:repeat(2,30%);
 }
-#inputform{
-border:2px solid black;
-margin:3% 40% 3% 40%;  
+#inputform,form input[type='reset']{
+border:2px solid black;  
+padding:0.5em 1em;
+margin-top:5%;
+margin-right:10%;
+border-radius: 0.5em;
 }
 
 .table{
@@ -93,4 +96,16 @@ select{
 }
 .searchinput{
   padding:0.25em;
+}
+
+form input{
+  border:1px solid black;
+}
+form input[name='email']
+{
+  margin-left: 10.5%;
+}
+form input[name='interests']
+{
+  margin-left: 6%;
 }

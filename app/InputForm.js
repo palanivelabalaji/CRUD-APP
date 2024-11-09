@@ -48,7 +48,7 @@ else if (name === 'dob') {
       const newFriend = {    id: uuidv4(),...formData,};
       addUser(formData);
     }
-    setFormData({firstname: "",lastname: "",email: "",dob: "",gender: "",hobbies:"",interests:""
+    setFormData({firstname: "",lastname: "",email: "",dob: "",gender: "",hobbies:[],interests:""
   });
   };
 
@@ -56,25 +56,25 @@ else if (name === 'dob') {
     <form onSubmit={handleSubmit}>
       <label>
         FirstName:
-        <input type="text" name="firstname" value={formData.firstname} onChange={handleInputChange} />
+        <input type="text" name="firstname" value={formData.firstname} onChange={handleInputChange} required/>
       </label>
       <label>
         LastName:
-        <input type="text" name="lastname" value={formData.lastname} onChange={handleInputChange} />
+        <input type="text" name="lastname" value={formData.lastname} onChange={handleInputChange} required/>
       </label>
       <label>
         Email:
-        <input type="email" name="email" value={formData.email} onChange={handleInputChange} />
+        <input type="email"  name="email" value={formData.email} onChange={handleInputChange} required/>
       </label>
       <label>
         Date of Birth:
-        <input type="date" name="dob" value={formData.dob} onChange={handleInputChange} />
+        <input type="date" name="dob" value={formData.dob} onChange={handleInputChange} required/>
       </label>
 
       <div class="gender">
       <label>
         Gender:
-        <input type="radio" name="gender" value="Male" onChange={handleInputChange} />
+        <input type="radio" name="gender" value="Male" onChange={handleInputChange}required />
         Male
       </label>
       <label>
@@ -89,12 +89,12 @@ else if (name === 'dob') {
       </div>
       <label>
       Interests
-        <input type="textarea" name="interests" value={formData.interests} onChange={handleInputChange} />
+        <input type="textarea" name="interests" value={formData.interests} onChange={handleInputChange} required />
       </label>
       
-<label>
-  Hobbies:
-<div>
+      <label>
+        Hobbies:
+      <div>
       <label For="Reading">
         <input
           id="Reading"
@@ -102,7 +102,7 @@ else if (name === 'dob') {
           onChange={handleInputChange}
           type="checkbox"
           checked={formData.hobbies.includes('Reading')}
-        />
+        required/>
         Reading
       </label>
       <label htmlFor="Writing">
@@ -168,8 +168,11 @@ else if (name === 'dob') {
       </label>
       </div>
     </label>
+    <div class='buttons'>
+    <button type="reset" id="inputform">Clear</button>
 
       <button type="submit" id='inputform'>Submit</button>
+      </div>
     </form>
   );
 };

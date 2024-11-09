@@ -25,6 +25,7 @@ const UserSearch = ({ searchUser }) => {
                 onChange={handleInputChange}
             />
             <select name="type" value={base} onChange={handleInputChange}>
+                <option value="select">Select</option>
                 <option value="age">Age</option>
                 <option value="firstname">FirstName</option>
                 <option value="lastname">LastName</option>

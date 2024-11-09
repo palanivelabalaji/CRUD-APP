@@ -1,0 +1,33 @@
+[
+  [
+    {
+      "id": "6bea",
+      "firstname": "Balajix",
+      "lastname": "P",
+      "email": "sec21cs167@sairamtap.edu.in",
+      "dob": "2013-02-04",
+      "gender": "Male",
+      "hobbies": [
+        "Reading",
+        "Writing"
+      ],
+      "interests": "Cycling",
+      "age": 11
+    },
+    {
+      "id": "dfb8",
+      "firstname": "Jaya Surya",
+      "lastname": "P",
+      "email": "sec21cs081@sairamtap.edu.in",
+      "dob": "1976-11-18",
+      "gender": "Male",
+      "hobbies": [
+        "Cooking",
+        "Dancing",
+        "Reading"
+      ],
+      "interests": "house wife",
+      "age": 47
+    }
+  ]
+]
